@@ -1,10 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Test Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mason Feduccia</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #34495e;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --font-main: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            font-family: var(--font-main);
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+        }
+        
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 1rem;
+            background-color: var(--primary);
+            color: var(--light);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 300;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0 0;
+            font-weight: 300;
+        }
+        
+        .hero-image {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 50%;
+            margin: 2rem 0;
+            border: 4px solid var(--accent);
+        }
+        
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            background-color: var(--secondary);
+        }
+        
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+        }
+        
+        .calendar-iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 4px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--secondary);
+            color: var(--light);
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+            }
+            
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav a {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>If you see this, GitHub Pages is working.</p>
+    <header>
+        <h1>Mason Feduccia</h1>
+        <p>Musician | Composer | Educator</p>
+        <img src="https://via.placeholder.com/600x600/2c3e50/e74c3c?text=Your+Photo" alt="Mason Feduccia" class="hero-image">
+    </header>
+    
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Music</a>
+        <a href="#">Calendar</a>
+        <a href="#">Contact</a>
+    </nav>
+    
+    <main>
+        <section id="welcome">
+            <h2>Welcome</h2>
+            <p>
+                Thank you for visiting my site. Here, you'll find information about my work as a musician, composer, and educator. 
+                Explore my music, check out my upcoming performances, and feel free to reach out for collaborations or inquiries.
+            </p>
+        </section>
+        
+        <section id="calendar">
+            <h2>Upcoming Events</h2>
+            <!-- Replace with your Google Calendar embed code -->
+            <iframe src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID" 
+                    class="calendar-iframe" 
+                    frameborder="0" 
+                    scrolling="no">
+            </iframe>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Mason Feduccia. All rights reserved.</p>
+    </footer>
 </body>
 </html>
