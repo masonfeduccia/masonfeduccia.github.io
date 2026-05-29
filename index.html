@@ -8,7 +8,7 @@
         :root {
             --primary: #2c3e50;
             --secondary: #34495e;
-            --accent: #e74c3c;
+            --accent: #f39c12;
             --light: #ecf0f1;
             --dark: #2c3e50;
             --font-main: "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -46,13 +46,24 @@
             font-weight: 300;
         }
         
-        .hero-image {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 50%;
-            margin: 2rem 0;
-            border: 4px solid var(--accent);
-        }
+        .hero-content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 2rem; /* Space between image and text */
+			flex-wrap: wrap; /* Wrap on mobile */
+		}
+
+		.hero-image {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			border: 1px solid var(--accent);
+		}
+
+		.hero-text {
+			text-align: left;
+		}
         
         nav {
             width: 100%;
@@ -112,6 +123,11 @@
                 font-size: 1rem;
             }
             
+			.hero-content {
+				flex-direction: column;
+				text-align: center;
+			}
+			
             nav {
                 flex-direction: column;
                 align-items: center;
@@ -125,10 +141,14 @@
 </head>
 <body>
     <header>
-        <h1>Mason Feduccia</h1>
-        <p>Musician | Composer | Educator</p>
-        <img src="images/profile_picture_small.png" alt="Mason Feduccia" class="hero-image">
-    </header>
+		<div class="hero-content">
+			<img src="images/profile_picture_small.png" alt="Mason Feduccia" class="hero-image">
+			<div class="hero-text">
+				<h1>Mason Feduccia</h1>
+				<p>Musician | Educator</p>
+			</div>
+		</div>
+	</header>
     
     <nav>
         <a href="#">Home</a>
@@ -150,11 +170,7 @@
         <section id="calendar">
             <h2>Upcoming Events</h2>
             <!-- Replace with your Google Calendar embed code -->
-            <iframe src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID" 
-                    class="calendar-iframe" 
-                    frameborder="0" 
-                    scrolling="no">
-            </iframe>
+            <iframe src="https://calendar.google.com/calendar/embed?src=dfaf9d000aa3ed3b1ddac6cebff543c0418470a85fae50e5343fde375069d1f0%40group.calendar.google.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
         </section>
     </main>
     
