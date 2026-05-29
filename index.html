@@ -100,11 +100,19 @@
             padding-bottom: 0.5rem;
         }
         
-        .calendar-iframe {
+        .calendar-container {
+			width: 100%;
+			max-width: 100%;
+			overflow: hidden;
+			margin: 0 auto;
+		}
+		
+		.calendar-iframe {
             width: 100%;
-            height: 400px;
-            border: none;
-            border-radius: 4px;
+			min-width: 100%;
+			height: 600px; /* Adjust as needed */
+			border: none;
+			border-radius: 4px;
         }
         
         footer {
@@ -113,9 +121,13 @@
             background-color: var(--secondary);
             color: var(--light);
         }
-        
+        /* Mobile-specific adjustments
         @media (max-width: 768px) {
-            header h1 {
+            .calendar-iframe {
+				height: 400px; /* Shorter height for mobile */
+			}
+			
+			header h1 {
                 font-size: 2rem;
             }
             
@@ -168,9 +180,15 @@
         </section>
         
         <section id="calendar">
-            <h2>Upcoming Events</h2>
+            <h2>Upcoming Performances</h2>
             <!-- Replace with your Google Calendar embed code -->
-            <iframe src="https://calendar.google.com/calendar/embed?src=dfaf9d000aa3ed3b1ddac6cebff543c0418470a85fae50e5343fde375069d1f0%40group.calendar.google.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            <div class="calendar-container">
+				<iframe src="https://calendar.google.com/calendar/embed?src=dfaf9d000aa3ed3b1ddac6cebff543c0418470a85fae50e5343fde375069d1f0%40group.calendar.google.com&ctz=America%2FChicago" 
+					class="calendar-iframe" 
+					frameborder="0" 
+					scrolling="no">
+				</iframe>
+			</div>	
         </section>
     </main>
     
